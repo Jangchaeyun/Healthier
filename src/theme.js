@@ -20,7 +20,7 @@ export const tokens = (mode) => ({
           100: "#d0d1d5",
           200: "#a1a4ab",
           300: "#727681",
-          400: "#434957",
+          400: "#1F2A40",
           500: "#141b2d",
           600: "#101624",
           700: "#0c101b",
@@ -163,31 +163,31 @@ export const themeSettings = (mode) => {
     },
 
     typography: {
-      fontFamily: ["Noto Sans KR", "sans-serif"].join(","),
-      fontSize: 12,
+      fontFamily: ["Dongle", "sans-serif"].join(","),
+      fontSize: 17,
       h1: {
-        fontFamily: ["Noto Sans KR", "sans-serif"].join(","),
-        fontSize: 40,
+        fontFamily: ["Dongle", "sans-serif"].join(","),
+        fontSize: 45,
       },
       h2: {
-        fontFamily: ["Noto Sans KR", "sans-serif"].join(","),
-        fontSize: 32,
+        fontFamily: ["Dongle", "sans-serif"].join(","),
+        fontSize: 40,
       },
       h3: {
-        fontFamily: ["Noto Sans KR", "sans-serif"].join(","),
-        fontSize: 24,
+        fontFamily: ["Dongle", "sans-serif"].join(","),
+        fontSize: 38,
       },
       h4: {
-        fontFamily: ["Noto Sans KR", "sans-serif"].join(","),
-        fontSize: 20,
+        fontFamily: ["Dongle", "sans-serif"].join(","),
+        fontSize: 28,
       },
       h5: {
-        fontFamily: ["Noto Sans KR", "sans-serif"].join(","),
-        fontSize: 16,
+        fontFamily: ["Dongle", "sans-serif"].join(","),
+        fontSize: 20,
       },
       h6: {
-        fontFamily: ["Noto Sans KR", "sans-serif"].join(","),
-        fontSize: 14,
+        fontFamily: ["Dongle", "sans-serif"].join(","),
+        fontSize: 18,
       },
     },
   };
