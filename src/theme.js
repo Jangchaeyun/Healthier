@@ -163,31 +163,31 @@ export const themeSettings = (mode) => {
     },
 
     typography: {
-      fontFamily: ["Dongle", "sans-serif"].join(","),
-      fontSize: 17,
+      fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+      fontSize: 12,
       h1: {
-        fontFamily: ["Dongle", "sans-serif"].join(","),
-        fontSize: 45,
+        fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+        fontSize: 37,
       },
       h2: {
-        fontFamily: ["Dongle", "sans-serif"].join(","),
-        fontSize: 40,
-      },
-      h3: {
-        fontFamily: ["Dongle", "sans-serif"].join(","),
-        fontSize: 38,
-      },
-      h4: {
-        fontFamily: ["Dongle", "sans-serif"].join(","),
+        fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
         fontSize: 28,
       },
+      h3: {
+        fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+        fontSize: 23,
+      },
+      h4: {
+        fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+        fontSize: 18,
+      },
       h5: {
-        fontFamily: ["Dongle", "sans-serif"].join(","),
-        fontSize: 20,
+        fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+        fontSize: 14,
       },
       h6: {
-        fontFamily: ["Dongle", "sans-serif"].join(","),
-        fontSize: 18,
+        fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+        fontSize: 10,
       },
     },
   };

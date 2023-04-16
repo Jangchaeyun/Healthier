@@ -5,9 +5,10 @@ import { Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
 import { tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
-import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
-import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
+import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
+import MedicationIcon from "@mui/icons-material/Medication";
+import LocalPharmacyIcon from "@mui/icons-material/LocalPharmacy";
+import VaccinesIcon from "@mui/icons-material/Vaccines";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import HelpOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
@@ -130,23 +131,23 @@ const Sidebar = () => {
               병원
             </Typography>
             <Item
-              title="의사 목록"
-              to="/team"
-              icon={<PeopleOutlinedIcon />}
+              title="병원 목록"
+              to="/hospital"
+              icon={<LocalHospitalIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="병원예약 목록"
-              to="/contacts"
-              icon={<ContactsOutlinedIcon />}
+              to="/hospital_reservation"
+              icon={<MedicationIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="병원예약"
-              to="/invoices"
-              icon={<ReceiptOutlinedIcon />}
+              title="의사 목록"
+              to="/doctor"
+              icon={<VaccinesIcon />}
               selected={selected}
               setSelected={setSelected}
             />
@@ -158,9 +159,9 @@ const Sidebar = () => {
               개인
             </Typography>
             <Item
-              title="프로필"
-              to="/form"
-              icon={<PersonOutlinedIcon />}
+              title="병원 예약"
+              to="/hospital_newreservation"
+              icon={<LocalPharmacyIcon />}
               selected={selected}
               setSelected={setSelected}
             />

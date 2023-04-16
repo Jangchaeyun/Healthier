@@ -1,36 +1,37 @@
 import { Box, Typography, useTheme } from "@mui/material";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
-import { mockDataTeam } from "../../data/mockData";
-import PhoneIcon from "@mui/icons-material/Phone";
+import { mockDataContacts } from "../../data/mockData";
+import SyncIcon from "@mui/icons-material/Sync";
+import CheckIcon from "@mui/icons-material/Check";
+import CancelIcon from "@mui/icons-material/Cancel";
 import Header from "../../components/Header";
 
-const Team = () => {
+const Contacts = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   const columns = [
     { field: "id", headerName: "ID" },
     {
-      field: "name",
-      headerName: "이름",
+      field: "hos_name",
+      headerName: "병원 이름",
       cellClassName: "name-column-cell",
       flex: 1,
     },
     {
-      field: "address",
-      headerName: "주소",
+      field: "phone",
+      headerName: "전화번호",
       headerAlign: "left",
       flex: 1,
       align: "left",
     },
-    { field: "distance", headerName: "거리", type: Number, flex: 1 },
-    { field: "time", headerName: "진료시간", flex: 1 },
+    { field: "date", headerName: "예약 날짜", type: Number, flex: 1 },
     {
-      field: "phone",
-      headerName: "전화번호",
+      field: "access",
+      headerName: "예약",
       flex: 1,
-      renderCell: ({ row: { phone } }) => {
+      renderCell: ({ row: { access } }) => {
         return (
           <Box
             width="60%"
@@ -38,12 +39,20 @@ const Team = () => {
             p="7px"
             display="flex"
             justifyContent="center"
-            backgroundColor={colors.greenAccent[600]}
+            backgroundColor={
+              access === "예약 완료"
+                ? colors.greenAccent[600]
+                : access === "예약 진행중"
+                ? colors.greenAccent[700]
+                : colors.greenAccent[800]
+            }
             borderRadius="4px"
           >
-            <PhoneIcon />
+            {access === "예약 완료" && <CheckIcon />}
+            {access === "예약 진행 중" && <SyncIcon />}
+            {access === "예약 취소" && <CancelIcon />}
             <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
-              {phone}
+              {access}
             </Typography>
           </Box>
         );
@@ -53,7 +62,7 @@ const Team = () => {
 
   return (
     <Box m="20px">
-      <Header title="병원 목록" subtitle="근처 병원들의 목록" />
+      <Header title="병원 예약 목록" subtitle="병원 예약한 목록확인" />
       <Box
         m="40px 0 0 0"
         height="75vh"
@@ -78,12 +87,19 @@ const Team = () => {
             borderTop: "none",
             backgroundColor: colors.blueAccent[700],
           },
+          "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
+            color: `${colors.grey[100]} !important`,
+          },
         }}
       >
-        <DataGrid rows={mockDataTeam} columns={columns} />
+        <DataGrid
+          rows={mockDataContacts}
+          columns={columns}
+          components={{ Toolbar: GridToolbar }}
+        />
       </Box>
     </Box>
   );
 };
 
-export default Team;
+export default Contacts;
