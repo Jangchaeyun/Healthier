@@ -209,7 +209,7 @@ const Sidebar = () => {
             />
             <Item
               title="전염병"
-              to="/geography"
+              to="/geo"
               icon={<MapOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
