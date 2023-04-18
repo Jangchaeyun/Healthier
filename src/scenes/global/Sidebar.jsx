@@ -208,7 +208,7 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="전염병"
+              title="코로나"
               to="/geo"
               icon={<MapOutlinedIcon />}
               selected={selected}

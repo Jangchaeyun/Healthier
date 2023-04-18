@@ -164,6 +164,21 @@ export const mockDataInvoices = [
   },
 ];
 
+export const mockTransactions = [
+  {
+    txId: "1",
+    hosp: "한길 안과",
+    date: "23-04-01",
+    cost: "68000",
+  },
+  {
+    txId: "2",
+    hosp: "연세 내과",
+    date: "23-04-17",
+    cost: "43000",
+  },
+];
+
 export const mockBarData = [
   {
     day: "월요일",
