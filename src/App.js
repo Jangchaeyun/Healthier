@@ -15,6 +15,8 @@ import Bar from "./scenes/Bar";
 import Pie from "./scenes/Pie";
 import Line from "./scenes/line";
 import Geography from "./scenes/geography";
+import Signin from "./scenes/signin";
+import Signup from "./scenes/signup";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -40,6 +42,8 @@ function App() {
               <Route path="/pie" element={<Pie />} />
               <Route path="/line" element={<Line />} />
               <Route path="/geo" element={<Geography />} />
+              <Route path="/signin" element={<Signin />} />
+              <Route path="/signup" element={<Signup />} />
             </Routes>
           </main>
         </div>
