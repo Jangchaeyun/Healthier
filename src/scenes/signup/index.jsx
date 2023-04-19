@@ -119,14 +119,14 @@ const Signup = () => {
               />
             </Box>
             <Box display="flex" justifyContent="center" mt="20px">
-              <Link to="/signin" style={{ textDecoration: "none" }}>
+              <Link to="/" style={{ textDecoration: "none" }}>
                 <Button type="submit" color="secondary" variant="contained">
                   가입하기
                 </Button>
               </Link>
             </Box>
             <Box display="flex" justifyContent="end" mt="20px">
-              <Link to="/" style={{ textDecoration: "none" }}>
+              <Link to="/signin" style={{ textDecoration: "none" }}>
                 <Button type="submit" color="secondary" variant="contained">
                   로그인
                 </Button>

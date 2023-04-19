@@ -17,21 +17,9 @@ const initialValues = {
   password: "",
 };
 
-const phoneRegExp =
-  /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
-
 const userSchema = yup.object().shape({
-  firstName: yup.string().required("필수"),
-  lastName: yup.string().required("필수"),
-  docName: yup.string().required("필수"),
-  disName: yup.string().required("필수"),
-  phone: yup
-    .string()
-    .matches(phoneRegExp, "핸드폰 번호가 올바르지 않습니다.")
-    .required("필수"),
-  date: yup.string().required("필수"),
-  birdate: yup.string().required("필수"),
-  time: yup.string().required("필수"),
+  id: yup.string().required("필수"),
+  password: yup.string().required("필수"),
 });
 
 const Signin = () => {
